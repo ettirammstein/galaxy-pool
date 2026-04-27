@@ -1,3 +1,7 @@
 {
-  "account": "babloweb4.near"
+  "account": "babloweb4.near",
+  "build": {
+    "root": "src",
+    "out_dir": "build"
+  }
 }
