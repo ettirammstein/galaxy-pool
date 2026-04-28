@@ -1,0 +1,12 @@
+[package]
+name = "galaxy-pool"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+near-sdk = "5.26.1"
+near-contract-standards = "5.26.1"
+borsh = "1.6"
