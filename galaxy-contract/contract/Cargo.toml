@@ -10,3 +10,4 @@ crate-type = ["cdylib"]
 near-sdk = "5.26.1"
 near-contract-standards = "5.26.1"
 borsh = "1.6"
+serde = { version = "1.0", features = ["derive"] }

@@ -253,6 +253,7 @@ dependencies = [
  "borsh",
  "near-contract-standards",
  "near-sdk",
+ "serde",
 ]
 
 [[package]]

@@ -1,8 +1,8 @@
 use near_sdk::borsh::{BorshDeserialize, BorshSerialize};
-use near_sdk::{env, near_bindgen};
+use near_sdk::{env, near_bindgen, serde::Serialize, serde::Deserialize};
 
 #[near_bindgen]
-#[derive(BorshDeserialize, BorshSerialize)]
+#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 pub struct GalaxyPool {
     pub owner: String,
     pub total_players: u64,
@@ -35,7 +35,7 @@ impl GalaxyPool {
     }
 
     #[payable]
-    pub fn join_pool(&mut self) {
+    pub fn join_and_spin(&mut self) {
         let deposit = env::attached_deposit().as_yoctonear();
 
         if deposit < 1_000_000_000_000_000_000_000 { // 1 NEAR
@@ -44,5 +44,8 @@ impl GalaxyPool {
 
         self.total_players += 1;
         self.pool_balance += deposit;
+
+        // Here you can add spin logic, e.g., random win
+        // For now, just join
     }
 }
