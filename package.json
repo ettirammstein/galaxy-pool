@@ -1,0 +1,23 @@
+{
+  "name": "galaxy-pool",
+  "version": "1.0.0",
+  "description": "Galaxy Pool - NEAR BOS widget for gacha spins",
+  "main": "src/__init__.js",
+  "scripts": {
+    "login": "bos login",
+    "build": "bos build",
+    "deploy": "bos deploy babloweb4.near",
+    "deploy:testnet": "bos deploy babloweb4.testnet"
+  },
+  "keywords": [
+    "near",
+    "bos",
+    "widget",
+    "gacha"
+  ],
+  "author": "ettirammstein",
+  "license": "MIT",
+  "devDependencies": {
+    "bos-cli-rs": "latest"
+  }
+}
